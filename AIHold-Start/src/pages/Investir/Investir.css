@@ -1,0 +1,354 @@
+.investir {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.btn-gerar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  font-size: 1.1rem;
+}
+
+.btn-gerar:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.resumo-sugestoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.resumo-item {
+  text-align: center;
+  padding: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.resumo-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.resumo-valor {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.sugestoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sugestao-item {
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sugestao-item:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.sugestao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.sugestao-info h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.sugestao-info p {
+  color: #6b7280;
+  margin: 0 0 8px 0;
+  font-size: 0.875rem;
+}
+
+.tipo-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-aplicar {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+/* Estilos para o cabeçalho das sugestões */
+.sugestoes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sugestoes-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Estilos para o botão "Aplicar Todas" */
+.btn-success {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-success:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-aplicar-todas {
+  font-size: 1rem;
+  padding: 12px 20px;
+}
+
+.sugestao-detalhes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.detalhe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detalhe-item:last-child {
+  border-bottom: none;
+}
+
+.detalhe-item span:first-child {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.detalhe-item span:last-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.valor-restante {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+}
+
+.valor-restante p {
+  margin: 0 0 8px 0;
+  color: #92400e;
+}
+
+.valor-restante p:last-child {
+  margin-bottom: 0;
+}
+
+.texto-pequeno {
+  font-size: 0.875rem;
+  color: #92400e;
+}
+
+.sem-sugestoes {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.sem-sugestoes p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.sem-sugestoes ul {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.sem-sugestoes li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .resumo-sugestoes {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .sugestoes-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .sugestoes-header h3 {
+    text-align: center;
+  }
+  
+  .btn-aplicar-todas {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .sugestao-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .sugestao-detalhes {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .detalhe-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* Estilos para escolha de algoritmo */
+.algoritmo-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.algoritmo-option {
+  cursor: pointer;
+  display: block;
+}
+
+.algoritmo-option input[type="radio"] {
+  display: none;
+}
+
+.algoritmo-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.algoritmo-option input[type="radio"]:checked + .algoritmo-label {
+  border-color: #667eea;
+  background-color: #f0f4ff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.algoritmo-label:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.algoritmo-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  color: white;
+}
+
+.algoritmo-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.algoritmo-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.algoritmo-option input[type="radio"]:checked + .algoritmo-label .algoritmo-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .algoritmo-label {
+    padding: 12px;
+  }
+  
+  .algoritmo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+  
+  .algoritmo-name {
+    font-size: 1rem;
+  }
+  
+  .algoritmo-desc {
+    font-size: 0.8rem;
+  }
+}

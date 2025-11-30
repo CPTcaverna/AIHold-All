@@ -1,0 +1,342 @@
+.configuracao {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.distribuicao-slider {
+  margin-top: 20px;
+}
+
+.slider-container {
+  margin-bottom: 20px;
+}
+
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  margin-bottom: 12px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  border: none;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.distribuicao-barra {
+  display: flex;
+  gap: 20px;
+}
+
+.distribuicao-item {
+  flex: 1;
+}
+
+.distribuicao-item span {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.barra-fill.acoes {
+  background-color: #2563eb;
+}
+
+.barra-fill.fiis {
+  background-color: #10b981;
+}
+
+/* Estilos para totais e somatórias */
+.totais-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.total-interno {
+  color: #10b981;
+  font-weight: 600;
+  margin: 0;
+}
+
+.somas-diferencas {
+  display: flex;
+  gap: 16px;
+}
+
+.soma-excesso {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 4px 8px;
+  background-color: #eff6ff;
+  border-radius: 4px;
+  border: 1px solid #bfdbfe;
+}
+
+.soma-falta {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 4px 8px;
+  background-color: #fef2f2;
+  border-radius: 4px;
+  border: 1px solid #fecaca;
+}
+
+.tabela-alocacao {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabela-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabela-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.tabela-row:last-child {
+  border-bottom: none;
+}
+
+.ativo-codigo {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.ativo-atual {
+  color: #6b7280;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-porcentagem {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.input-porcentagem:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.diferenca {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Cores para as diferenças */
+.diferenca.azul {
+  color: #1e40af;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.diferenca.verde {
+  color: #065f46;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.diferenca.vermelho {
+  color: #991b1b;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.ativo-carteira {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.info-card {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.info-card h3 {
+  color: #1e40af;
+  margin-bottom: 16px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  color: #1e40af;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.info-card li:before {
+  content: "•";
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .tabela-header,
+  .tabela-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .tabela-header {
+    display: none;
+  }
+  
+  .tabela-row {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .ativo-codigo::before {
+    content: "Ativo: ";
+    font-weight: 600;
+    color: #6b7280;
+  }
+  
+  .ativo-atual::before {
+    content: "Atual: ";
+    font-weight: 600;
+    color: #6b7280;
+  }
+  
+  .ativo-carteira::before {
+    content: "% Carteira: ";
+    font-weight: 600;
+    color: #6b7280;
+  }
+  
+  .distribuicao-barra {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Estilos responsivos para totais */
+  .totais-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .somas-diferencas {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .soma-excesso,
+  .soma-falta {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Layout das tabelas lado a lado */
+.configuracao-tabelas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .configuracao-tabelas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .configuracao-tabelas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
